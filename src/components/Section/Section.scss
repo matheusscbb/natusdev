@@ -1,0 +1,20 @@
+@use '../../styles/variables' as *;
+
+.section {
+  padding: 72px 0 40px;
+}
+
+.section-header {
+  max-width: 640px;
+  margin-bottom: 32px;
+}
+
+.section-header h2 {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+}
+
+.section-header p,
+.section-subtitle {
+  color: $color-text-muted;
+}

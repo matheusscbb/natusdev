@@ -1,0 +1,145 @@
+@use '../../styles/variables' as *;
+
+.process-section {
+  padding: 72px 0 40px;
+}
+
+.process-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ── Shared step styles ── */
+.process-step-title {
+  color: #9B7AFF;
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+
+.process-step-desc {
+  color: #CCCCFF;
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 6px 0 0;
+}
+
+.process-diamond {
+  width: 14px;
+  height: 14px;
+  background: #9B7AFF;
+  border-radius: 2px;
+  transform: rotate(45deg);
+  flex-shrink: 0;
+}
+
+/* ── Desktop: horizontal timeline ── */
+.process-timeline-desktop {
+  width: 100%;
+  margin-top: 148px;
+}
+
+.process-row {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.process-row-top .process-cell {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 24px;
+}
+
+.process-row-bottom .process-cell {
+  display: flex;
+  justify-content: center;
+  padding-top: 24px;
+}
+
+.process-cell .process-step-content {
+  text-align: center;
+  max-width: 200px;
+}
+
+.process-line {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  position: relative;
+}
+
+.process-line::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: rgba(155, 122, 255, 0.3);
+  transform: translateY(-50%);
+}
+
+.process-diamond-cell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  height: 20px;
+}
+
+/* ── Mobile: vertical timeline ── */
+.process-timeline-mobile {
+  display: none;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .process-timeline-desktop {
+    display: none;
+  }
+
+  .process-timeline-mobile {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 32px;
+    padding-left: 8px;
+  }
+
+  .process-step-vertical {
+    display: flex;
+    gap: 16px;
+    align-items: stretch;
+    min-height: 90px;
+  }
+
+  .process-diamond-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 20px;
+    flex-shrink: 0;
+    padding-top: 4px;
+  }
+
+  .process-vertical-line {
+    width: 2px;
+    flex: 1;
+    background: rgba(155, 122, 255, 0.3);
+    margin-top: 6px;
+  }
+
+  .process-step-vertical:last-child .process-vertical-line {
+    display: none;
+  }
+
+  .process-step-vertical .process-step-content {
+    text-align: left;
+    padding-bottom: 24px;
+  }
+}

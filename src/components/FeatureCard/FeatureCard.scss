@@ -1,0 +1,24 @@
+@use '../../styles/variables' as *;
+
+.feature-card {
+  background: $color-white;
+  border-radius: 18px;
+  padding: 20px 22px;
+  border: 1px solid $color-border;
+  box-shadow: $shadow-card-soft;
+}
+
+.feature-card h3 {
+  margin-bottom: 12px;
+}
+
+.feature-tag {
+  display: inline-flex;
+  margin-bottom: 12px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: $color-badge-bg;
+  color: $color-primary;
+  font-size: 0.75rem;
+  font-weight: 600;
+}

@@ -1,0 +1,30 @@
+@use '../../styles/variables' as *;
+@use '../../styles/buttons';
+
+.cta-section {
+  padding-top: 80px;
+}
+
+.cta-card {
+  background: linear-gradient(120deg, $color-primary, $color-primary-strong);
+  border-radius: 28px;
+  padding: 40px 48px;
+  color: $color-white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.cta-card .primary-btn {
+  background: $color-white;
+  color: $color-primary;
+  box-shadow: none;
+}
+
+@media (max-width: 980px) {
+  .cta-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

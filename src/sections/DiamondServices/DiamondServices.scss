@@ -1,0 +1,146 @@
+@use '../../styles/variables' as *;
+
+
+.diamond-services-inner {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    
+    height: 700px;
+    padding-top: 50px;
+    padding-bottom: 100px;
+}
+
+.diamond-services-inner {
+    position: relative;
+
+    .section-header-textarea {
+        max-width: 222px;
+    }
+}
+
+.diamond-grid {
+    position: relative;
+    height: 406px;
+    width: 582px;
+    margin-top: 22px;
+
+    .diamond-item {
+        position: absolute;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &.diamond-left {
+            left: 0;
+
+            .diamond-shape {
+                background: linear-gradient(225deg, #7553CE 0%, #9153CF 100%);
+            }
+        }
+
+        &.diamond-right {
+            right: 0;
+
+            .diamond-shape {
+                background: linear-gradient(216.3deg, #4855CD 0%, #6F54CE 100%);
+            }
+        }
+
+        &.diamond-bottom {
+            bottom: 0;
+            right: 0;
+            left: 0;
+
+            .diamond-shape {
+                background: linear-gradient(225deg, #5855CD 0%, #7E53CE 100%);
+            }
+        }
+        
+        .diamond-shape {
+            width: 225px;
+            height: 225px;
+            border-radius: 4px;
+            transform: rotate(45deg);
+
+            position: relative;
+        }
+
+        .diamond-label {
+            color: $color-bg;
+            font-size: 24px;
+            font-weight: 700;
+            transform: rotate(-45deg);
+            
+            width: 225px;
+            height: 225px;
+            border-radius: 4px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            text-align: center;
+            text-transform: uppercase;
+            line-height: 1;
+            
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .diamond-services-inner {
+        height: auto;
+        padding: 48px 16px;
+    }
+
+    .diamond-grid {
+        position: static;
+        height: auto;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        margin-top: 24px;
+
+        .diamond-item {
+            position: static;
+            width: 100%;
+
+            &.diamond-left,
+            &.diamond-right,
+            &.diamond-bottom {
+                left: auto;
+                right: auto;
+                bottom: auto;
+            }
+
+            .diamond-shape {
+                width: 100%;
+                height: 90px;
+                border-radius: 0;
+                transform: none;
+                background: linear-gradient(90deg, #3E56CD 0%, #9153CF 100%) !important;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .diamond-label {
+                position: static;
+                width: auto;
+                height: auto;
+                transform: none;
+                font-size: 18px;
+                text-align: center;
+            }
+        }
+    }
+}

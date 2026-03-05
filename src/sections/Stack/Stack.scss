@@ -1,0 +1,16 @@
+@use '../../styles/variables' as *;
+
+.stack-grid {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.stack-pill {
+  background: $color-white;
+  border-radius: 999px;
+  padding: 10px 16px;
+  border: 1px solid $color-border-soft;
+  font-weight: 600;
+  font-size: 0.9rem;
+}

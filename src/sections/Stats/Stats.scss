@@ -1,0 +1,27 @@
+@use '../../styles/variables' as *;
+
+.stats-grid {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.stat-card {
+  background: $color-white;
+  border-radius: 18px;
+  padding: 20px 22px;
+  border: 1px solid $color-border;
+  box-shadow: $shadow-card-soft;
+}
+
+.stat-title {
+  display: block;
+  font-size: 0.9rem;
+  color: $color-text-soft;
+  margin-bottom: 8px;
+}
+
+.stat-value {
+  font-size: 1.6rem;
+  color: $color-text-strong;
+}

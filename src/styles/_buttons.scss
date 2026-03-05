@@ -1,0 +1,49 @@
+@use './variables' as *;
+
+.primary-btn,
+.outlined-btn {
+  padding: 12px 28px;
+  border-radius: 0;
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  letter-spacing: 0.08rem;
+  font-size: 0.8rem;
+}
+
+.primary-btn.btn-small,
+.outlined-btn.btn-small {
+  padding: 8px 18px;
+  font-size: 0.7rem;
+  letter-spacing: 0.06rem;
+}
+
+.primary-btn.btn-medium,
+.outlined-btn.btn-medium {
+  padding: 12px 28px;
+  font-size: 0.8rem;
+  letter-spacing: 0.08rem;
+}
+
+.primary-btn.btn-large,
+.outlined-btn.btn-large {
+  padding: 16px 36px;
+  font-size: 0.9rem;
+  letter-spacing: 0.1rem;
+}
+
+.primary-btn {
+  background: linear-gradient(120deg, #7a4bff 0%, #6b3dff 100%);
+  border: 1px solid #7a4bff;
+  color: $color-white;
+  box-shadow: none;
+}
+
+.outlined-btn {
+  border: 1px solid rgba(201, 187, 255, 0.65);
+  color: #efe9ff;
+  background: rgba(22, 12, 52, 0.4);
+}
