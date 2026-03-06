@@ -35,7 +35,7 @@ export default function Home() {
         <LogoCloud content={logoCloud} />
         <Services content={services} />
         <Stack content={stack} /> */}
-        <CTA content={cta} />
+        {/* <CTA content={cta} /> */}
       </main>
 
       <footer className="app-footer">
