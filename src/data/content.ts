@@ -55,14 +55,16 @@ export type ProcessContent = {
 }
 
 export type CaseItem = {
-  client: string
-  goal: string
-  result: string
+  name: string
+  description: string
+  icon?: string
+  image?: string
 }
 
 export type CasesContent = {
   title: string
   subtitle: string
+  categories: string[]
   items: CaseItem[]
 }
 
@@ -182,23 +184,26 @@ export const process: ProcessContent = {
 }
 
 export const cases: CasesContent = {
-  title: 'Cases e resultados',
-  subtitle: 'Resultados reais de parcerias com equipes de produto.',
+  title: 'Cases',
+  subtitle: 'Entregas desenvolvidas com nossos clientes',
+  categories: ['Fintech', 'Logística', 'Educação', 'Varejo', 'Saúde'],
   items: [
     {
-      client: 'Operadora logística',
-      goal: 'Reduzir tempo de roteirização',
-      result: '+38% de eficiência operacional',
+      name: 'Better Habbit',
+      description:
+        'Plataforma de ensino de inglês EAD. Voltada para a conexão de alunos e professores do mundo todo de forma simplificada.',
+      icon: '/assets/logo-habbit.svg',
+      image: '/assets/mac-better-habbit.png',
     },
     {
-      client: 'Fintech B2B',
-      goal: 'Escalar onboarding de clientes',
-      result: '+52% de conversão em 90 dias',
+      name: 'Better Habbit',
+      description:
+        'Plataforma de ensino de inglês EAD. Voltada para a conexão de alunos e professores do mundo todo de forma simplificada.',
     },
     {
-      client: 'Healthtech',
-      goal: 'Integração de sistemas clínicos',
-      result: 'Tempo de resposta 3x mais rápido',
+      name: 'Better Habbit',
+      description:
+        'Plataforma de ensino de inglês EAD. Voltada para a conexão de alunos e professores do mundo todo de forma simplificada.',
     },
   ],
 }

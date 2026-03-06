@@ -30,11 +30,11 @@ export default function Home() {
         <Hero content={hero} />
         <DiamondServices />
         <Process content={process} />
-        <Testimonials content={testimonials} />
+        <Cases content={cases} />
+        {/* <Testimonials content={testimonials} />
         <LogoCloud content={logoCloud} />
         <Services content={services} />
-        <Cases content={cases} />
-        <Stack content={stack} />
+        <Stack content={stack} /> */}
         <CTA content={cta} />
       </main>
 

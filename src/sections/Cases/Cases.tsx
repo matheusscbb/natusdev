@@ -1,5 +1,6 @@
 import type { CasesContent } from '../../data/content'
-import Section from '../../components/Section/Section'
+import SectionHeader from '../../components/SectionHeader/SectionHeader'
+import Image from 'next/image'
 
 type CasesProps = {
   content: CasesContent
@@ -7,17 +8,57 @@ type CasesProps = {
 
 function Cases({ content }: CasesProps) {
   return (
-    <Section id="cases" title={content.title} subtitle={content.subtitle}>
-      <div className="cases-grid">
-        {content.items.map((item) => (
-          <article className="case-card" key={item.client}>
-            <span className="case-client">{item.client}</span>
-            <p>{item.goal}</p>
-            <p className="case-result">{item.result}</p>
-          </article>
-        ))}
+    <section id="cases" className="cases-section">
+      <div className="cases-inner">
+        <SectionHeader title={content.title} subtitle={content.subtitle} />
+
+        <div className="cases-categories">
+          {content.categories.map((cat, i) => (
+            <span key={cat}>
+              {cat.toUpperCase()}
+              {i < content.categories.length - 1 && (
+                <span className="cases-category-separator">|</span>
+              )}
+            </span>
+          ))}
+        </div>
+
+        <div className="cases-grid">
+          {content.items.map((item, i) => (
+            <article className="case-card" key={i}>
+              <div className="case-card-header">
+                {item.icon ? (
+                  <Image
+                    src={item.icon}
+                    alt={item.name}
+                    width={36}
+                    height={36}
+                    className="case-card-icon"
+                  />
+                ) : (
+                  <div className="case-card-icon" />
+                )}
+                <h3 className="case-card-name">{item.name}</h3>
+              </div>
+              <p className="case-card-desc">{item.description}</p>
+              <div className="case-card-image">
+                {item.image ? (
+                  <Image
+                    src={item.image}
+                    alt={item.name}
+                    width={350}
+                    height={200}
+                    className="case-card-image-img"
+                  />
+                ) : (
+                  <div className="case-card-image-placeholder" />
+                )}
+              </div>
+            </article>
+          ))}
+        </div>
       </div>
-    </Section>
+    </section>
   )
 }
 
